@@ -8,12 +8,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * MyBatis Plus 配置
+ * description
  *
- * @author https://github.com/liyupi
+ * @return
+ * @title
+ * @author tianzhou
+ * @date 2023/3/21 09:34
  */
 @Configuration
-@MapperScan("com.yupi.springbootinit.mapper")
+@MapperScan("com.api.mapper")
 public class MyBatisPlusConfig {
 
     /**

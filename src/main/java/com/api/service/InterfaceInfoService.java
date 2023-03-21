@@ -9,6 +9,15 @@ import com.api.model.entity.InterfaceInfo;
 * @createDate 2023-03-20 21:53:47
 */
 public interface InterfaceInfoService extends IService<InterfaceInfo> {
+    /**
+     * description 
+     * 
+     * @param  interfaceInfo,add 
+     * @return void
+     * @title validInterfaceInfo       
+     * @author tianzhou
+     * @date 2023/3/21 10:34
+     */
     void validInterfaceInfo(InterfaceInfo interfaceInfo, boolean add);
 
 }

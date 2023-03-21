@@ -1,12 +1,9 @@
 package com.api.service.impl;
 
+import com.api.common.ErrorCode;
 import com.api.constant.CommonConstant;
 import com.api.constant.UserConstant;
 import com.api.exception.BusinessException;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.api.common.ErrorCode;
 import com.api.mapper.UserMapper;
 import com.api.model.dto.user.UserQueryRequest;
 import com.api.model.entity.User;
@@ -15,10 +12,9 @@ import com.api.model.vo.LoginUserVO;
 import com.api.model.vo.UserVO;
 import com.api.service.UserService;
 import com.api.utils.SqlUtils;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.servlet.http.HttpServletRequest;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import org.apache.commons.lang3.StringUtils;
@@ -26,11 +22,16 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * 用户服务实现
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * @author tianzhou
+ 
  */
 @Service
 @Slf4j
